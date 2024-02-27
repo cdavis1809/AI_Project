@@ -54,6 +54,9 @@ form {
   line-height: 2;
   padding: 20px;
 }
+.recipe-response strong {
+  color: rgba(36, 62, 58, 0.874);
+}
 a {
   color: rgba(59, 96, 89, 0.766);
 }
