@@ -21,5 +21,9 @@ function getRecipe(event) {
     "You are a world class chef specializing in quick and delicious meals. Generate a meal that will be ready in less than an hour and only requires one pan/pot. Please provide ingredients in a bulleted list with one ingredient per line followed by numbered steps each on a separate line. Please sign 'SheCodes AI' in a <strong></strong> element at the end of the recipe.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
+  recipeElement.innerHTML = `<div class="generating">⏳ Generating a quick and delicious ${input.value} recipe</div>`;
+
   axios.get(apiUrl).then(displayRecipe);
 }

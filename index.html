@@ -17,24 +17,26 @@
   <body>
     <header>
       <h1>AI Recipe Generator</h1>
+      <h3>One-pot meals that are ready in under an hour!</h3>
     </header>
     <div class="container">
       <main>
-        <form id="recipe-form">
-          <input
-            type="text"
-            placeholder="Enter your preferred cuisine..."
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="button" />
-        </form>
-        <div class="recipe-response" id="recipe">
-          Your recipe is a click away!
+        <div class="form-container">
+          <form id="recipe-form">
+            <input
+              type="text"
+              placeholder="Enter your preferred cuisine..."
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="button" />
+          </form>
+          <div class="hint">i.e.: Chinese, American, French, Italian</div>
         </div>
+        <div class="recipe-response hidden" id="recipe"></div>
       </main>
     </div>
     <footer>
